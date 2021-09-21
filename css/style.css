@@ -70,7 +70,7 @@ header {
     font-family: 'Permanent Marker';
     font-size: 1.8rem;
     padding: 20px 0px;
-    transition: all 5s;
+    transition: all .5s;
 }
 
 h1,
@@ -101,4 +101,109 @@ nav ul li {
 
 nav ul li:hover {
     background-color: #447BBE;
+}
+
+section {
+    padding: 40px 60px;
+    text-align: center;
+}
+
+section .row {
+    padding: 15px 30px;
+}
+
+section h2 {
+    font-family: Raleway;
+    font-weight: 900;
+    font-size: 2.2rem;
+}
+
+section h3,
+section p {
+    font-family: Montserrat;
+    font-weight: 200;
+}
+
+
+/* APLICANDO FLEXBOX */
+
+section#who-am-i div.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+/* FIN APLICANDO FLEXBOX */
+
+section#who-am-i h3,
+section#who-am-i h2 {
+    text-align: center;
+}
+
+section#who-am-i div.row p {
+    padding: 10px 40px;
+    width: 50%;
+    text-align: justify;
+}
+
+section#who-am-i img {
+    border-radius: 50%;
+}
+
+
+/* SECCION SERVICES
+ PSEUDO CLASES*/
+
+section#services {
+    text-align: center;
+    color: #fff;
+}
+
+section#services div.row:nth-child(1) {
+    text-align: center;
+}
+
+section#services div.row:nth-child(2) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+section#services div.row:nth-child(2) article:nth-child(odd) {
+    background-color: #2B3784;
+}
+
+section#services div.row:nth-child(2) article:nth-child(even) {
+    background-color: #B11313;
+}
+
+section#services div.row article {
+    width: 25%;
+    height: 200px;
+    margin: 20px 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    transition: all 300ms;
+}
+
+section#services div.row article:hover {
+    transform: scale3d(1.2, 1.2, 1.2) rotateY( 360deg) translateZ(50px);
+}
+
+section#services div.row article h2 {
+    font-size: 1.5rem;
+}
+
+
+/* SECCION SERVICES*/
+
+section#gallery img {
+    transition: all 300ms;
+}
+
+section#gallery img:hover {
+    transform: scale3d(1.5, 1.5, 1.5) rotateY( 180deg) translateY(30px);
 }
