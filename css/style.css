@@ -48,7 +48,7 @@ Azul Oscuro: #2B3784
     background-position: 100% 35%;
     background-repeat: no-repeat;
     background-size: cover;
-    animation: expansion 5s infinite;
+    animation: alternate expansion 2.5s infinite;
 }
 
 
@@ -75,7 +75,7 @@ header {
 }
 
 h1 {
-    animation: expansion-h1 5s infinite;
+    animation: alternate expansion-h1 2s infinite;
 }
 
 h1,
@@ -311,12 +311,19 @@ a#btn-floating {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: #B11313;
     border: none;
     border-radius: 50%;
     font-size: 2rem;
+    background: #B11313;
     color: #fff;
     padding: 10px 15px;
+    transition: all 300ms;
+}
+
+a#btn-floating:hover {
+    background: #fff;
+    color: #B11313;
+    transform: scale(1.3);
 }
 
 
