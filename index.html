@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Personal</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
     <!-- Cascading Style Sheets -->
     <!-- Hojas de estilos en cascada -->
@@ -13,18 +14,18 @@
 </head>
 
 <body>
-    <header class="bg-color-blue-dark parallax">
+    <header id="home" class="bg-color-blue-dark parallax">
         <h1>Spider-Man</h1>
         <p>"Tu buen vecino spidey"</p>
     </header>
 
     <nav class="bg-color-blue-dark">
         <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Who Am I</a></li>
-            <li><a href="">Services</a></li>
-            <li><a href="">Gallery</a></li>
-            <li><a href="">Contact me</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#who-am-i">Who Am I</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact-me">Contact me</a></li>
         </ul>
     </nav>
 
@@ -96,29 +97,38 @@
     </section>
 
     <!-- Contact me -->
-    <section>
-        <h2>Contáctame</h2>
-        <p>Si tienes problemas no dudes en contactarme, por favor deja tu mensaje</p>
+    <section id="contact-me" class="parallax">
+
+        <div class="row">
+            <h2>Contáctame</h2>
+            <p>Si tienes problemas no dudes en contactarme, por favor deja tu mensaje</p>
+        </div>
 
         <form>
             <label for="id-fullname">Nombre Completo</label>
             <input type="text" name="fullName" id="id-fullname">
-            <br>
+
             <label for="id-email">Correo</label>
             <input type="text" name="email" id="id-email">
-            <br>
+
             <label for="id-message">Mensaje</label>
             <textarea name="message" id="id-message" cols="30" rows="10"></textarea>
+
+            <button type="submit">Enviar</button>
         </form>
     </section>
 
     <footer>
-        <a href="mailto:spidey@gmail.com">Contáctame aquí</a>
-        <p>Copyright 2021 - Todos los derechos reservados</p>
+        <div class="row">
+            <a href="mailto:spidey@gmail.com">Contáctame aquí</a>
+        </div>
+        <div class="row">
+            <p>Copyright 2021 - Todos los derechos reservados</p>
+        </div>
     </footer>
 
     <!-- AQUI VA UN BOTON FLOTANTE, IMPORTANTE -->
-
+    <a id="btn-floating" href="#home"><i class="fas fa-arrow-up"></i></a>
 </body>
 
 </html>

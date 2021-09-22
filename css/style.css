@@ -48,6 +48,7 @@ Azul Oscuro: #2B3784
     background-position: 100% 35%;
     background-repeat: no-repeat;
     background-size: cover;
+    animation: expansion 5s infinite;
 }
 
 
@@ -71,6 +72,10 @@ header {
     font-size: 1.8rem;
     padding: 20px 0px;
     transition: all .5s;
+}
+
+h1 {
+    animation: expansion-h1 5s infinite;
 }
 
 h1,
@@ -112,14 +117,19 @@ section .row {
     padding: 15px 30px;
 }
 
-section h2 {
+section h2,
+section button {
     font-family: Raleway;
     font-weight: 900;
     font-size: 2.2rem;
 }
 
 section h3,
-section p {
+section p,
+section label,
+input,
+textarea,
+footer {
     font-family: Montserrat;
     font-weight: 200;
 }
@@ -153,7 +163,11 @@ section#who-am-i img {
 
 
 /* SECCION SERVICES
- PSEUDO CLASES*/
+PSEUDO CLASES*/
+
+section#services {
+    height: 85%;
+}
 
 section#services {
     text-align: center;
@@ -198,12 +212,130 @@ section#services div.row article h2 {
 }
 
 
-/* SECCION SERVICES*/
+/* SECCION GALLERY*/
 
 section#gallery img {
     transition: all 300ms;
+    width: 400px;
 }
 
 section#gallery img:hover {
     transform: scale3d(1.5, 1.5, 1.5) rotateY( 180deg) translateY(30px);
+}
+
+
+/* SECCION CONTACT ME*/
+
+section#contact-me {
+    height: 85%;
+}
+
+section#contact-me div.row:nth-child(1) {
+    text-align: center;
+    color: #fff;
+}
+
+section#contact-me label {
+    color: #fff;
+}
+
+section#contact-me form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+section#contact-me form * {
+    background: transparent;
+    color: #fff;
+}
+
+section#contact-me form input,
+section#contact-me form textarea {
+    border: 1px solid #fff;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+section#contact-me form button {
+    cursor: pointer;
+    border: none;
+    background-color: #2B3784;
+    padding: 15px 30px;
+    transition: all 300ms;
+    font-size: 1.15rem;
+    /* font-weight: 200; */
+}
+
+section#contact-me form button:hover {
+    background: #447BBE;
+}
+
+
+/* SECCION FOOTER*/
+
+footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    background: #2b3784;
+    padding: 8px 0;
+}
+
+footer div.row {
+    padding: 12px 0px;
+}
+
+footer div.row a,
+footer div.row p {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer div.row a {
+    transition: all 300ms;
+}
+
+footer div.row a:hover {
+    font-size: 120%;
+}
+
+
+/* BOTON FLOTANTE */
+
+a#btn-floating {
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #B11313;
+    border: none;
+    border-radius: 50%;
+    font-size: 2rem;
+    color: #fff;
+    padding: 10px 15px;
+}
+
+
+/* ANIMACIONES*/
+
+@keyframes expansion {
+    from {
+        background-position-y: 35%;
+    }
+    to {
+        background-position-y: 45%;
+    }
+}
+
+@keyframes expansion-h1 {
+    from {
+        font-size: 2em;
+    }
+    to {
+        font-size: 5rem;
+    }
 }
